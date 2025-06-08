@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Te Amo Laila 💖</title>
+    <meta name="language" content="en-US">
+    <meta name="title" content="Dear Sun">
+    <meta name="description" content="Collecting this wasn't easy — your star is my motivation to keep going! Contributions are welcome too.">
+    <link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/sun0225SUN/photos/img/20210715233345.png">
+    <link rel="stylesheet" href="css/love.css">
+    
+</head>
+
+<body>
+    
+    <button id="playBtn" class="music-btn" title="Tocar música">
+        ▶
+    </button>
+
+    <!-- Áudio oculto inicialmente -->
+    <audio id="audios" preload="auto">
+        <source src="MP3/1.mp3" type="audio/mpeg" />
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+
+    <!-- Música de fundo com autoplay e loop -->
+
+    <!-- Conteúdo principal -->
+    <div class="container" onselectstart="return false;" unselectable="on" style="-moz-user-select: none;">
+
+        <!-- Lado esquerdo com gif -->
+        <div class="body_left">
+            <img src="images/biubiubiu.gif" alt="Animation" ondragstart="return false;">
+        </div>
+
+        <!-- Parte central com animações (provavelmente corações) -->
+        <div class="body_center">
+            <div class="love">
+                <div class="block">
+                    <div class="div1"></div>
+                    <div class="div2"></div>
+                    <div class="div3"></div>
+                    <div class="div4"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Mensagem fora do coração, abaixo dele -->
+        <div id="finalMessage" style="display: none;">
+            <div class="love-line" id="line1">Por acaso você viaja no tempo?</div>
+            <div class="love-line" id="line2">Pois já consigo te ver no meu futuro</div>
+            <div class="love-line" id="line3">Eu Te Amo Laila 💖</div>
+        </div>
+    </div>
+
+
+    <!-- Rodapé com efeitos de borda -->
+    <div class="footer">
+        <div class="border">
+            <div class="border-top"></div>
+            <div class="border-bottom"></div>
+        </div>
+    </div>
+
+    <!-- JavaScript com animações e interatividade -->
+    <script src="js/love.js"></script>
+
+</body>
+</html>
