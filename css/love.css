@@ -3,23 +3,6 @@
     padding: 0;
     border: 0;
 }
-.music-btn {
-    position: fixed;
-    bottom: 40px;
-    right: 40px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: #ff4d6d;
-    color: white;
-    font-size: 28px;
-    font-weight: bold;
-    border: none;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-    cursor: pointer;
-    z-index: 100;
-    transition: background-color 0.3s, transform 0.2s;
-}
 
 .music-btn:hover {
     background-color: #ff1f4a;
@@ -52,6 +35,26 @@ body {
     position: absolute;
     z-index: 98;
 
+}
+.nome {
+    text-align: center;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 28px;
+    color: #ff6f61;
+    margin-top: 10px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    animation: fadeInDown 2s ease-in-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /*---------------------- body_left -------------------------*/
@@ -156,6 +159,44 @@ body {
 
 }
 
+.music-btn {
+  position: fixed !important;
+  bottom: 40px;
+  right: 40px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #ff4d6d;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  z-index: 200;
+  overflow: visible !important;
+}
+
+.pulse-text {
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ffcf9c;
+  font-size: 14px;
+  font-weight: bold;
+  animation: pulse 1.5s infinite;
+  pointer-events: none;
+  white-space: nowrap;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: translateX(-50%) scale(1); }
+  50% { opacity: 0.6; transform: translateX(-50%) scale(1.1); }
+}
+
 .cursor {
     display: inline-block;
     animation: blink 0.8s infinite;
@@ -179,10 +220,75 @@ body {
     width: 100%;
     text-align: center;
     top: 20px;
+    font-family: cursive;
     color: #ff4d6d;
     font-size: 40px;
     line-height: 1.8;
   }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+
+ .photo-stack {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  width: 600px;
+  height: 600px;
+  z-index: 80;
+}
+
+@keyframes fadeInPhoto {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.photo {
+  position: absolute;
+  width: 220px;
+  height: auto;
+  border: 6px solid white;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  transition: transform 0.3s;
+  cursor: pointer;
+  opacity: 0;
+  animation: fadeInPhoto 1s ease forwards;
+}
+
+/* Posicionamento mais espalhado */
+.photo1 {
+  top: 0px;
+  left: 0px;
+  transform: rotate(-18deg);
+  z-index: 3;
+  animation-delay: 2s;
+}
+
+.photo2 {
+  top: 200px;
+  left: 220px;
+  transform: rotate(15deg);
+  z-index: 2;
+  animation-delay: 3.5s;
+}
+
+.photo3 {
+  top: 400px;
+  left: 50px;
+  transform: rotate(-10deg);
+  z-index: 1;
+  animation-delay: 5s;
+}
+
+.photo:hover {
+  transform: scale(1.08) rotate(0deg);
+  z-index: 10;
+}
+
   
   .love-line {
     opacity: 0;
@@ -191,10 +297,7 @@ body {
   .love-line.show {
     opacity: 1;
   }
-  @keyframes pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-  }
+  
 
 .footer {
     bottom: 30px;

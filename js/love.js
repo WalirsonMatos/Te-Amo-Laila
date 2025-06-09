@@ -79,10 +79,10 @@ playBtn.addEventListener('click', () => {
 function initAudio() {
     audio.play();
     playBtn.textContent = '⏸';
-    window.removeEventListener('mousemove', initAudio); // executa só uma vez
+    window.removeEventListener('click', initAudio); // executa só uma vez
 }
 
-window.addEventListener('mousemove', initAudio);
+window.addEventListener('click', initAudio);
 
 const block_left = parseFloat(window.getComputedStyle(block, null).left.slice(0, -2)),
     block_top = parseFloat(window.getComputedStyle(block, null).top.slice(0, -2));
