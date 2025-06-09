@@ -348,6 +348,45 @@ body {
 .copyright div span {
     color: dimgray;
 }
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+  }
+
+  .body_left,
+  .body_center,
+  #finalMessage {
+    position: relative;
+    order: initial;
+    margin: 20px 0;
+    z-index: 1;
+  }
+
+  .photo-stack {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr; /* 1 por linha */
+    gap: 20px;
+    width: 90%;
+    max-width: 400px;
+    margin: 40px 0;
+    z-index: 0;
+  }
+
+  .photo {
+    position: relative;
+    width: 100%;
+    transform: none !important;
+    animation: none !important;
+    opacity: 1 !important;
+    border-radius: 16px;
+  }
+}
+
+
 
 /*---------------------- footer -------------------------*/
 
